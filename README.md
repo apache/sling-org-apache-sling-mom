@@ -1,3 +1,7 @@
+[<img src="http://sling.apache.org/res/logos/sling.png"/>](http://sling.apache.org)
+
+ [![Build Status](https://builds.apache.org/buildStatus/icon?job=sling-org-apache-sling-mom-1.8)](https://builds.apache.org/view/S-Z/view/Sling/job/sling-org-apache-sling-mom-1.8) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.mom/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.mom%22) [![JavaDocs](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.mom.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.mom) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)&#32;[![contrib](http://sling.apache.org/badges/status-contrib.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/status/contrib.md)
+
 # Apache Sling Message oriented Middleware API
 
 This module is part of the [Apache Sling](https://sling.apache.org) project.
@@ -62,5 +66,3 @@ To recieve messages from the queue ise the [QueueManager API](src/main/java/org/
             
 The QueueManager implementation will deliver messages to the queueReader.onMessage(...) method. The implementation of the QueueReader.onMessage method
 may process the message, returning normally, or request the message is requeued by throwing a RequeueMessageExption.
-
-
