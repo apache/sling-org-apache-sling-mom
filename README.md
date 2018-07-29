@@ -53,7 +53,7 @@ To add a message to a named queue use the [QueueManager API](src/main/java/org/a
            name is the name of the queue.
            message is the message in map of maps form.
            
-To recieve messages from the queue ise the [QueueManager API](src/main/java/org/apache/sling/mom/QueueManager.java)
+To receive messages from the queue use the [QueueManager API](src/main/java/org/apache/sling/mom/QueueManager.java)
 
         QueueSession queueSession =  queueManager.open( QueueReader queueReader, String name, MessageFilter messageFilter);
         
