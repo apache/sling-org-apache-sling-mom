@@ -19,15 +19,12 @@
 
 package org.apache.sling.mom;
 
-
 import org.osgi.annotation.versioning.ProviderType;
 
-import javax.annotation.Nonnull;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 /**
  * Manages Topics allowing callers to publish messages onto a Topic and Subscribe to a topic.
  *
