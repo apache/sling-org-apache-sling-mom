@@ -21,13 +21,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.sling</groupId>
-        <artifactId>sling</artifactId>
-        <version>30</version>
+        <artifactId>sling-bundle-parent</artifactId>
+        <version>47</version>
         <relativePath />
     </parent>
 
     <artifactId>org.apache.sling.mom</artifactId>
-    <packaging>bundle</packaging>
     <version>1.0.1-SNAPSHOT</version>
 
     <name>Apache Sling Message oriented Middleware API</name>
@@ -39,30 +38,21 @@
         <connection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-mom.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/sling-org-apache-sling-mom.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=sling-org-apache-sling-mom.git</url>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
         <site.jira.version.id>12315369</site.jira.version.id>
-        <sling.java.version>7</sling.java.version>
-        <exam.version>4.4.0</exam.version>
-        <url.version>2.4.5</url.version>
-        <bundle.build.dir>${basedir}/target</bundle.build.dir>
-        <bundle.file.name>${bundle.build.dir}/${project.build.finalName}.jar</bundle.file.name>
-        <min.port>37000</min.port>
-        <max.port>37999</max.port>
+        <sling.java.version>8</sling.java.version>
+        <project.build.outputTimestamp>1</project.build.outputTimestamp>
     </properties>
 
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
@@ -80,8 +70,8 @@
     </reporting>
     <dependencies>
         <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
